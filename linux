@@ -1,0 +1,36 @@
+# Linux Command Line Lab
+
+## Project: Linux File Navigation & Log Analysis
+
+### Objective
+Execute command-line operations to navigate a Linux system, access files, and analyze log data using CLI tools.
+
+### Actions Performed
+- Listed directory contents using `ls`
+- Identified working directory with `pwd`
+- Navigated directories using `cd`
+- Accessed and read file contents using `cat`
+- Performed log search using `grep`
+
+### Commands Used
+ls  
+pwd  
+cd  
+cat  
+grep  
+
+### Key Output
+- Accessed file: folder4/note.txt
+- Output: Hello World!
+- Extracted log data from access.log using grep
+
+### Skills Demonstrated
+- Linux file system navigation  
+- Command-line operations  
+- Log analysis using grep  
+
+### Real-World Application
+Used for system troubleshooting, log investigation, and cybersecurity analysis in Linux environments.
+
+
+
