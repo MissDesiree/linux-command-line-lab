@@ -1,0 +1,272 @@
+Here’s a clean GitHub-style breakdown you can post:
+
+````markdown
+# Linux Basics: SSH, Commands, Filesystem, and Permissions
+
+## 1. Connecting to a Linux Machine Remotely Using SSH
+
+SSH stands for Secure Shell. It allows you to securely connect to another Linux machine from your computer.
+
+### Basic SSH command
+
+```bash
+ssh username@ip-address
+````
+
+### Example
+
+```bash
+ssh student@192.168.1.25
+```
+
+This connects to the Linux machine with the username `student` and IP address `192.168.1.25`.
+
+### SSH using a custom port
+
+```bash
+ssh -p 2222 username@ip-address
+```
+
+Example:
+
+```bash
+ssh -p 2222 admin@192.168.1.25
+```
+
+The `-p` flag tells SSH to use a specific port.
+
+---
+
+## 2. Using Flags, Switches, and Man Pages
+
+Linux commands can be expanded using flags or switches. These change how a command behaves.
+
+### Example with `ls`
+
+```bash
+ls
+```
+
+Shows files and folders.
+
+```bash
+ls -l
+```
+
+Shows files in long format.
+
+```bash
+ls -a
+```
+
+Shows hidden files.
+
+```bash
+ls -la
+```
+
+Combines both options.
+
+### Learning more with man pages
+
+Man pages are built-in help documents for Linux commands.
+
+```bash
+man ls
+```
+
+This opens the manual page for the `ls` command.
+
+Other examples:
+
+```bash
+man ssh
+man chmod
+man grep
+```
+
+To exit a man page, press:
+
+```bash
+q
+```
+
+---
+
+## 3. Common Filesystem Commands
+
+These commands help you move around and work with files and folders.
+
+### Show current directory
+
+```bash
+pwd
+```
+
+### List files
+
+```bash
+ls
+```
+
+### Change directory
+
+```bash
+cd /home/student
+```
+
+### Go back one folder
+
+```bash
+cd ..
+```
+
+### Create a folder
+
+```bash
+mkdir projects
+```
+
+### Create a file
+
+```bash
+touch notes.txt
+```
+
+### Copy a file
+
+```bash
+cp notes.txt backup-notes.txt
+```
+
+### Move or rename a file
+
+```bash
+mv notes.txt linux-notes.txt
+```
+
+### Delete a file
+
+```bash
+rm linux-notes.txt
+```
+
+### View file contents
+
+```bash
+cat notes.txt
+```
+
+### Search inside a file
+
+```bash
+grep "error" log.txt
+```
+
+---
+
+## 4. File Permissions and Switching Users
+
+Linux uses permissions to control who can read, write, or execute files.
+
+### View permissions
+
+```bash
+ls -l
+```
+
+Example output:
+
+```bash
+-rw-r--r-- 1 student student 120 notes.txt
+```
+
+Permissions mean:
+
+```text
+r = read
+w = write
+x = execute
+```
+
+The permission groups are:
+
+```text
+owner | group | others
+```
+
+### Change permissions with chmod
+
+```bash
+chmod 755 script.sh
+```
+
+This gives:
+
+```text
+Owner: read, write, execute
+Group: read, execute
+Others: read, execute
+```
+
+### Switch users
+
+```bash
+su username
+```
+
+### Run a command as administrator
+
+```bash
+sudo apt update
+```
+
+`sudo` allows a permitted user to run commands with root/admin privileges.
+
+---
+
+## 5. Important Root Directories in Ubuntu Linux
+
+Ubuntu Linux organizes files using a root directory `/`. Everything starts from this location.
+
+### Important directories
+
+| Directory | Purpose                                          |
+| --------- | ------------------------------------------------ |
+| `/home`   | Stores user files and personal folders           |
+| `/etc`    | Stores system configuration files                |
+| `/var`    | Stores changing data like logs and service files |
+| `/bin`    | Contains essential user commands                 |
+| `/sbin`   | Contains system administration commands          |
+| `/usr`    | Stores installed programs and shared files       |
+| `/tmp`    | Temporary files                                  |
+| `/root`   | Home directory for the root user                 |
+| `/boot`   | Files needed to start the system                 |
+| `/dev`    | Device files such as drives and terminals        |
+| `/proc`   | System and process information                   |
+| `/opt`    | Optional third-party software                    |
+
+### Example usage
+
+```bash
+cd /var/log
+ls
+```
+
+This lets you view system log files.
+
+```bash
+cd /etc
+ls
+```
+
+This shows configuration files used by the system.
+
+---
+
+## Summary
+
+In this Linux lesson, I learned how to connect to a remote Linux machine using SSH, how to use command flags and man pages, and how to work with files and directories from the command line. I also learned the basics of Linux permissions, how to switch users, and how important Ubuntu root directories are organized. Understanding these directories is useful because they store user data, configuration files, logs, system commands, and information that helps with troubleshooting, security, and system administration.
+
+```
+```
